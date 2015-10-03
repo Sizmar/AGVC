@@ -1,14 +1,14 @@
-#UQ Autonomous Ground Vehicle Competition 2013
+# UQ Autonomous Ground Vehicle Competition 2013
 
 This contains an OpenCV approach to autonomously control a small robot (an electric wheelchair) around an obstacle course.
 
 The main directory contains the obstacle avoidance simulation used for the robot.
 The **robot** directory contains the code uploaded to the wheelchair (named *The Elderly Gentleman*) on the day. 
 
-##How to shop web
+## How to shop web
 If you just want to get this up and running with some stereo cameras, this should get you on your merry way.
 
-###Connecting the Cameras
+### Connecting the Cameras
 
 When plugging in the cameras, ensure that the LEFT camera is plugged in first. This ensures that it is assigned to /dev/video0.
 
@@ -17,7 +17,7 @@ Next you want to get the uvc_camera node (wiki.ros.org/uvc_camera) publishing th
 `roslaunch uvc_camera stereo_node_agvc.launch`
 The stereo_node_agvc.launch file can be found in this repo.
 
-###Calibrating the Cameras
+### Calibrating the Cameras
 
 If this is the first time, or the cameras have been in storage for a few days or more, run the calibration. Follow the really nice tutorial here (wiki.ros.org/uvc_camera).
 
@@ -36,14 +36,14 @@ and then run the following to show the GUI for tweaking:
 `rosrun dynamic_reconfigure reconfigure_gui`
 Read the tuturial for what they all mean. I found the more important ones were: uniqueness_ratio, min_disparity, disparity_range, speckle_range.
 
-###Getting the depth data
+### Getting the depth data
 
 The stereo_image_proc node is used to convert the calibrated stereo cameras into a depth map. This node is started by:
 
 `rosrun stereo_image_proc stereo_image_proc`
 Once that's all running, we're ready to plug some code into it.
 
-###Running some code
+### Running some code
 The best one to look at will be liveObstacleDetection.py. It shows how to subscribe to the ROS topics for the point cloud and image data. And it also shows how the ObstacleDetector class can be used.
 
 `./liveObstacleDetection.py`
