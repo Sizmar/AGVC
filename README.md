@@ -17,7 +17,7 @@ Next you want to get the uvc_camera node (wiki.ros.org/uvc_camera) publishing th
 `roslaunch uvc_camera stereo_node_agvc.launch`
 The stereo_node_agvc.launch file can be found in this repo.
 
-### Calibrating the Cameras
+### Calibrating the Cameras (Using ROS)
 
 If this is the first time, or the cameras have been in storage for a few days or more, run the calibration. Follow the really nice tutorial here (wiki.ros.org/uvc_camera).
 
@@ -50,3 +50,6 @@ The best one to look at will be liveObstacleDetection.py. It shows how to subscr
 
 
 This code was written for the AGVC competition hosted by Deakin University and CISR [see the official page here](http://www.agvc.net.au/).
+
+#Team
+The team consists of Kit Ham, Justin Rahardjo, Adam Keyes and Jared Page.
